@@ -1,0 +1,5 @@
+Source: World Health Organization (WHO), Mpox
+Reference: https://www.who.int/news-room/fact-sheets/detail/mpox
+Local summary (educational; check the linked source for current guidance):
+
+Mpox may involve a rash or lesions, fever, swollen lymph nodes, and other symptoms; presentation varies. It can spread through close physical contact with someone who has mpox, contaminated materials, or infected animals. A photo cannot confirm mpox. Contact a healthcare professional or local public health service for assessment and current testing/isolation advice, and avoid close contact while awaiting guidance if mpox is suspected. Vaccination and prevention recommendations depend on local risk and current public-health guidance. This file is a short reference summary, not a substitute for current WHO guidance or medical care.

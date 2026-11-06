@@ -1,0 +1,5 @@
+Source: Centers for Disease Control and Prevention (CDC), Measles
+Reference: https://www.cdc.gov/measles/
+Local summary (educational; check the linked source for current guidance):
+
+Measles is a highly contagious viral illness that can cause fever, cough, runny nose, red or watery eyes, and a rash. It spreads through the air and can remain infectious in a space after an infected person leaves. If measles is possible, call a healthcare provider or public health service before arriving in person so others can be protected. Two doses of MMR vaccine provide strong protection. A clinician/public health authority can advise on isolation, testing, and contacts. This file is a short reference summary, not a substitute for current CDC guidance or medical care.

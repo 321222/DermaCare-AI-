@@ -1,0 +1,62 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    expose:
+      - "11434"
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  streamlit:
+    build:
+      context: .
+    restart: unless-stopped
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+      DERMACARE_DB: /data/dermacare_history.sqlite3
+      DERMACARE_MODEL_PATH: /app/models/skin_disease_cnn.keras
+      DERMACARE_LABELS_PATH: /app/models/class_names.json
+    ports:
+      - "127.0.0.1:8501:8501"
+    volumes:
+      - history_data:/data
+      - ./models:/app/models:ro
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health', timeout=3).read()"
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 90s
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    profiles: ["public"]
+    depends_on:
+      streamlit:
+        condition: service_healthy
+    command:
+      - tunnel
+      - --no-autoupdate
+      - run
+      - --token
+      - ${CLOUDFLARE_TUNNEL_TOKEN:-}
+
+volumes:
+  ollama_data:
+  history_data:

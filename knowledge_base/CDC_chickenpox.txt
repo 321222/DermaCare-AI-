@@ -1,0 +1,5 @@
+Source: Centers for Disease Control and Prevention (CDC), Chickenpox (Varicella)
+Reference: https://www.cdc.gov/chickenpox/
+Local summary (educational; check the linked source for current guidance):
+
+Chickenpox is caused by varicella-zoster virus. It can spread through close contact and through infectious particles in the air. People with a suspected contagious rash should avoid close contact with others, especially people at higher risk, and should contact a healthcare professional for advice. Vaccination is an important prevention measure. Seek medical care for severe symptoms or for people at increased risk of complications. Do not give aspirin to children or teenagers with chickenpox because of the risk of Reye syndrome. This file is a short reference summary, not a substitute for current CDC guidance or medical care.
